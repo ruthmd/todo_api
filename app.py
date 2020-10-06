@@ -59,7 +59,7 @@ def get_users(current_user):
     users = []
     for user in User.query.all():
         user_data = {'public_id': user.public_id, 'name': user.name, 'password': user.password, 'admin': user.admin}
-        user.append(user_data)
+        users.append(user_data)
     return jsonify(users)
 
 
